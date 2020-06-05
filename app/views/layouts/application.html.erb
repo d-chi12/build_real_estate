@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   </head>
 
-  <body>
-    <% if ["public", "devise"].include?(controller.controller_name) %>
+  <body id="<%= controller.controller_name %>" class="<%= controller.action_name %>">
+    <% if ["public","devise","sessions"].include?(controller.controller_name) %>
     <header>
       <%= render "layouts/nav/public" %>
-    <%= yield %>
+      <%= yield %>
     </header>
     <% else %>
       <%= render "layouts/nav/dashboard" %>
