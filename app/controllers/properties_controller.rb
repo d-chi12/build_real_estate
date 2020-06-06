@@ -6,6 +6,8 @@ class PropertiesController < ApplicationController
   # GET /properties.json
   def index
     @properties = Property.all
+    @a = ENV['LOGIN_NAME']
+    @b = ENV['LOGIN_PASSWORD']
   end
 
   # GET /properties/1
@@ -71,6 +73,6 @@ class PropertiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def property_params
-      params.require(:property).permit(:name, :address, :price, :rooms, :bethrooms)
+      params.require(:property).permit(:name, :address, :price, :rooms, :bethrooms, :photo, :photo_cache)
     end
 end
