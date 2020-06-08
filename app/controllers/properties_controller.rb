@@ -6,8 +6,6 @@ class PropertiesController < ApplicationController
   # GET /properties.json
   def index
     @properties = Property.all
-    @a = ENV['LOGIN_NAME']
-    @b = ENV['LOGIN_PASSWORD']
   end
 
   # GET /properties/1
