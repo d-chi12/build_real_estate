@@ -1,28 +1,41 @@
-<p id="notice"><%= notice %></p>
+<div class="property-main-photo" style="background-image:url('<%= property_photo_url @property %>')"> 
+  <div class="photo-overlay">
+  </div>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @property.name %>
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-8">
+      <p>
+        <strong>Name:</strong>
+        <%= @property.name %>
+      </p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @property.address %>
-</p>
+      <p>
+        <strong>Address:</strong>
+        <%= @property.address %>
+      </p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @property.price %>
-</p>
+      <p>
+        <strong>Price:</strong>
+        <%= @property.price %>
+      </p>
 
-<p>
-  <strong>Rooms:</strong>
-  <%= @property.rooms %>
-</p>
+      <p>
+        <strong>Rooms:</strong>
+        <%= @property.rooms %>
+      </p>
 
-<p>
-  <strong>Bethrooms:</strong>
-  <%= @property.bethrooms %>
-</p>
+      <p>
+        <strong>Bethrooms:</strong>
+        <%= @property.bethrooms %>
+      </p>
+    </div>
 
-<%= link_to 'Edit', edit_property_path(@property) %> |
+    <div class="col-4">
+      <%= render "properties/ageent_details" %>
+      <%#= render "properties/ageent_details" %>
+    </div>
+
+  </div>
+</div>
