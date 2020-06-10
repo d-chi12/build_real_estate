@@ -8,7 +8,11 @@
   margin-bottom: 40px;
 }
 
-#pro-details {
+#prop-details {
   height: 15px;
   overflow: hidden;
+
+  &.open {
+    height: auto;
+  }
 }
