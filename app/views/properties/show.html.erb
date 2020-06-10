@@ -30,34 +30,22 @@
           </div>
         </div>
       </div>
-        <div class="row">
-          <div class="col">
-            <p>
-              <strong>Name:</strong>
-              <%= @property.name %>
-            </p>
+      <div class="row border-top border-bottom mt-5 pt-4 pb-4">
+        <div class="col-6">
+          <strong><%= link_to "Est. Monthly Repayments of #{ number_to_currency((@property.price / 360), precision: 0) }", "#", class: "text-success" %></strong>
+        </div>
+        <div class="col-6 text-right">
+          <strong><%= link_to "Can I affard this property", "#", class: "text-success" %></strong>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <p class="h3"><%= @property.name %></p>
+          <p class="h5">Property Description</p>
 
-            <p>
-              <strong>Address:</strong>
-              <%= @property.address %>
-            </p>
-
-            <p>
-              <strong>Price:</strong>
-              <%= @property.price %>
-            </p>
-
-            <p>
-              <strong>Rooms:</strong>
-              <%= @property.rooms %>
-            </p>
-
-            <p>
-              <strong>Bethrooms:</strong>
-              <%= @property.bethrooms %> 
-            </p>
-          </div>
+          <%= simple_format @property.details %>
         </div>  
+      </div>
     </div>
     <div class="col-4">
       <%= render "properties/agent_details" %>
