@@ -9,17 +9,24 @@
       <div class="row">
         <div class="col-6">
           <p class="mb-0"><%= @property.address %></p>
-          <p class="h2">For Sale max</p>
+          <p class="h2"><%= @property.price > 0 ? number_to_currency(@property.price, precision: 0) : "For Sale" %></p>
         </div>
-        <div class="col-6">
-          <div class="">
-            <%= @property.rooms %>
-          </div>
-          <div class="">
-            <%= @property.bathrooms %>
-          </div>
-          <div class="">
-            <%= @property.parking_spaces %>
+        <div class="col-6 text-center">
+          <div class="row mr-3 bg-light p-3">
+            <div class="col-4">
+              <p class="m-0"><strong>Rooms</strong></p>
+              <span class="lead"><%= @property.rooms %></span>
+            </div>
+
+            <div class="col-4">
+              <p class="m-0"><strong>Bedrooms</strong></p>
+              <span class="lead"><%= @property.bethrooms %></span>
+            </div> 
+
+            <div class="col-4">
+              <p class="m-0"><strong>Bedrooms</strong></p>
+              <span class="lead"><%= @property.parking_spaces %></span>
+            </div> 
           </div>
         </div>
       </div>
@@ -46,15 +53,15 @@
             </p>
 
             <p>
-              <strong>Bathrooms:</strong>
-              <%= @property.bathrooms %>
+              <strong>Bethrooms:</strong>
+              <%= @property.bethrooms %> 
             </p>
           </div>
         </div>  
-        <div class="col-4">
-          <%= render "properties/agent_details" %>
-          <%# render "properties/agent_details" %>
-        </div>
+    </div>
+    <div class="col-4">
+      <%= render "properties/agent_details" %>
+      <%# render "properties/agent_details" %>
     </div>
   </div>
 </div>

@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 2020_06_09_074502) do
     t.string "address"
     t.integer "price"
     t.integer "rooms"
-    t.integer "bathrooms"
+    t.integer "bethrooms"
     t.string "photo"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
