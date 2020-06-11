@@ -15,5 +15,3 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
 assets = Rails.application.config.assets
 assets.precompile += %w(basic.css)
-
-Rails.application.config.assets.precompile += ['*.js','*.css']
