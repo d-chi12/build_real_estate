@@ -67,7 +67,7 @@
       </div>
     </div>
     <div class="col-md-4">
-      <%= render "properties/agent_details" %>
+      <%= render "properties/agent_details", agent: @agent %>
       <iframe class="ml-lg-4 mt-3" width="320" height="240" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?kye=AIzaSyCf0lLWSdqCfk7ReTMmari0R3ZmPwQs9OA=<%= @property.address.to_param %>" allowfullscrren></iframe>
     </div>
   </div>
@@ -84,4 +84,4 @@
   </div>
 </section>
 
-<%= render "properties/send_email_modal" %>
+<%= render "properties/send_email_modal", agent: @agent %>
