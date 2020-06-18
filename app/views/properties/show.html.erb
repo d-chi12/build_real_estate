@@ -37,32 +37,14 @@
           </div>
         </div>
       </div>
-      <div class="row border-top border-bottom mt-5 pt-4 pb-4">
-        <div class="col-6">
-          <% if @property.for_sale? %>
-            <strong><%= link_to "Est. Monthly Repayments of #{ number_to_currency((@property.price / 360), precision: 0) }", "#", class: "text-success" %></strong>
-          <% else %>
-            <strong>Available from <%= @property.available_date.strftime("%a") %>, <%= @property.available_date.day.ordinalize %>, <%= @property.available_date.strftime("%B") %></strong>
-          <% end %>
-        </div>
-        <div class="col-6 text-right">
-          <strong><%= link_to "Can I affard this property", "#", class: "text-success" %></strong>
-        </div>
-      </div>
-      <div class="row">
+      <div class="row border-top mt-5 pt4">
         <div class="col">
-          <p class="h3"><%= @property.name %></p>
-          <p class="h5">Property Description</p>
+          <p class="h5">Description</p>
           <div id="prop-details" class="">
             <%= simple_format @property.details %>
           </div>
 
           <button class="btn btn-outline-info mt-3" id="toggleDetails">Show more</button>
-          
-          <% if @property.for_sale %>
-            <p class="mt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <% end %>
-          
         </div>  
       </div>
     </div>

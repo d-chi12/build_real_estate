@@ -13,13 +13,12 @@ $(function(){
       $(this).text("show more");
     }
   });
-
   $("#send-message-to-agent").on("click", function(){
     var agent_id = $("#agent_id").val(),
         first_name = $("#message-first-name").val(),
         last_name = $("#message-last-name").val(),
-        email = $("#message-email").val()
-        message = $("#message-text").val();
+        email = $("#message-email").val(),
+        message = $("#message-text").val()
 
     $.ajax({
       url: "/agent/message",

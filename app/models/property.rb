@@ -5,7 +5,7 @@ class Property < ApplicationRecord
   scope :latest, -> { order created_at: :desc }
 
   scope :sold, -> { where(for_sale: true, statue: "sold") }
-  scope :for_sale, -> { where (for_sale: true, statue: "available") }
-  scope :leased, -> { where (for_sale: false, statue: "leased") }
-  scope :for_rent, -> { where (for_sale: false, statue: "available") }
+  scope :for_sale, -> { where(for_sale: true, statue: "available") }
+  scope :leased, -> { where(for_sale: false, statue: "leased") }
+  scope :for_rent, -> { where(for_sale: false, statue: "available") }
 end
