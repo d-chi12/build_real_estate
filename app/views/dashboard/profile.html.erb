@@ -1,4 +1,4 @@
-<div class="property-main-photo" style="background-image:url('<%= property_photo_url @property %>')"> 
+<div class="property-main-photo" style="background-image:url('<%= cover_image_url @account %>')"> 
   <div class="photo-overlay">
   </div>
 </div>
@@ -18,7 +18,7 @@
           <p class="h5">Description</p>
 
           <div id="prop-details" class="">
-            <%= simple_format @property.details %>
+            <%= simple_format @account.details %>
           </div>
 
           <button class="btn btn-outline-info mt-3" id="toggleDetails">Show more</button>

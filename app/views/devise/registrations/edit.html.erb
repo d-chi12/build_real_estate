@@ -61,7 +61,13 @@
     <%= f.label :image %>
     <%= f.text_field :image, class: "form-control" %>
     <%= f.hidden_field :image_cache %>
+  </div>
 
+  <div class="form-group">
+    <%= f.label :cover_image %>
+    <%= f.text_field :cover_image, class: "form-control" %>
+    <%= f.hidden_field :cover_image_cache %>
+  </div>
     
     <% if @account.image.present? %>
       <%= image_tag @property.image.thumb.url, class: "mt-4" %>
@@ -72,6 +78,7 @@
   <div class="actions">
     <%= f.submit "Update" %>
   </div>
+  
 <% end %>
 
 <h3>Cancel my account</h3>
