@@ -66,7 +66,7 @@
     <div class="col-md-4">
       <%= render "properties/agent_details" %>
 
-      <iframe class="ml-lg-4 mt-3" width="320" height="240" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?kye=AIzaSyCf0lLWSdqCfk7ReTMmari0R3ZmPwQs9OA=<%= @property.address.to_param %>" allowfullscrren></iframe>
+      <iframe class="ml-lg-4 mt-3" width="320" height="240" frameborder="0" style="border:0" src="https://maps.google.co.jp/maps?output=embed&q=原宿駅=<%= @property.address.to_param %>" allowfullscrren></iframe>
     </div>
   </div>
 </div>
