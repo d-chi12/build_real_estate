@@ -68,7 +68,7 @@
     <%= f.hidden_field :cover_image_cache %>
     
     <% if @account.image.present? %>
-      <%= image_tag @property.image.thumb.url, class: "mt-4" %>
+      <%= image_tag @account.image.thumb.url, class: "mt-4" %>
     <% end %> 
   </div>
 
