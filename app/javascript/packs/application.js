@@ -19,7 +19,6 @@ require ("@fortawesome/fontawesome")
 require ("@fortawesome/fontawesome-free-solid")
 require ("@fortawesome/fontawesome-free-regular")
 require ("@fortawesome/fontawesome-free-brands")
-require("jquery")
 var jQuery = require("jquery")
 global.$ = global.jQuery = jQuery
 window.$ = window.jQuery = jQuery
